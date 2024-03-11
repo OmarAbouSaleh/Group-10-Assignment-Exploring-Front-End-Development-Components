@@ -1,0 +1,35 @@
+{
+    "students": [
+      {
+        "first_name": "Emma",
+        "last_name": "Williams",
+        "date_of_birth": "2003-02-18",
+        "current_grade_percentage": 92
+      },
+      {
+        "first_name": "Daniel",
+        "last_name": "Garcia",
+        "date_of_birth": "2002-07-05",
+        "current_grade_percentage": 85
+      },
+      {
+        "first_name": "Sophia",
+        "last_name": "Brown",
+        "date_of_birth": "2004-01-22",
+        "current_grade_percentage": 78
+      },
+      {
+        "first_name": "Ethan",
+        "last_name": "Clark",
+        "date_of_birth": "2001-11-09",
+        "current_grade_percentage": 95
+      },
+      {
+        "first_name": "Olivia",
+        "last_name": "Taylor",
+        "date_of_birth": "2003-09-14",
+        "current_grade_percentage": 88
+      }
+    ]
+  }
+  
