@@ -9,23 +9,36 @@ const AddStudentForm = ({ onAddStudent }) => {
 
   const handleAddStudent = () => {
     if (firstName && lastName && dob && grade) {
-      const newStudent = {
-        first_name: firstName,
-        last_name: lastName,
-        date_of_birth: dob,
-        current_grade_percentage: parseFloat(grade),
-      };
+      try {
+        // Parse the input date string to ensure it is in yyyy-mm-dd format
+        const dobDate = new Date(dob);
+        if (isNaN(dobDate.getTime())) {
+          throw new Error('Invalid Date');
+        }
 
-      onAddStudent(newStudent);
-      // Optionally, you can reset the form fields
-      setFirstName('');
-      setLastName('');
-      setDob('');
-      setGrade('');
+        const dobFormatted = dobDate.toISOString().split('T')[0];
+
+        const newStudent = {
+          first_name: firstName,
+          last_name: lastName,
+          date_of_birth: dobFormatted,
+          current_grade_percentage: parseFloat(grade),
+        };
+
+        onAddStudent(newStudent);
+        // Optionally, you can reset the form fields
+        setFirstName('');
+        setLastName('');
+        setDob('');
+        setGrade('');
+      } catch (error) {
+        alert('Please enter a valid Date of Birth in the format yyyy-mm-dd.');
+      }
     } else {
       alert('Please fill in all the fields.');
     }
   };
+
 
   return (
     <div>
