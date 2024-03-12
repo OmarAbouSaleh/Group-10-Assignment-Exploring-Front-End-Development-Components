@@ -2,22 +2,48 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+1. install and run the server dependencies:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    To install:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    npm install
+    # or 
+    yarn
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+    To run:
 
+    ```bash
+    npm run dev
+    # or
+    yarn dev
+    # or
+    pnpm dev
+    # or
+    bun dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+2. Install and run server dependencies:
+
+    Open a new terminal and follow the steps 
+
+    To install:
+
+    npm install -D json-server
+
+    To run 
+
+    npm run json-server
+
+
+3. Functionality of the Web Application:
+
+    -Add Student
+    -Remove Student
+    -Edit Student (Click the Edit Button for the student you want to edit. The form will populate the wioth the student's current information. Hit Update to make the changes).
+
+    
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
