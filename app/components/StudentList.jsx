@@ -2,7 +2,6 @@
 
 // StudentList.js
 import React, { useState, useEffect } from 'react';
-import Footer from './Footer';
 import AddStudentForm from './AddStudentForm';
 
 const StudentList = () => {
@@ -25,18 +24,19 @@ const StudentList = () => {
     fetchData();
   }, []);
 
-  const handleEdit = (index) => {
-    // Your existing edit logic here
+  const handleEdit = (studentId, updateStudent) => {
+    setStudents(students.map(student => student.id === studentId ? updateStudent : student));
+    // logic to sync with backend
   };
 
-  const handleRemove = (index) => {
-    // Your existing remove logic here
+  const handleRemove =(studentId) => {
+    setStudents(students.filter(student => student.id !== studentId));
   };
 
   const handleAddStudent = (newStudent) => {
     setStudents([...students, newStudent]);
-    // You can also send the new student data to your backend/API to update the JSON file
   };
+
 
   return (
     <div className="bg-blue-500 text-white p-8">
@@ -54,12 +54,6 @@ const StudentList = () => {
           </li>
         ))}
       </ul>
-      <div className="flex justify-center mt-4">
-        <AddStudentForm onAddStudent={handleAddStudent} />
-      </div>
-      <div className="bg-gray-200 text-gray-700 p-8 mb-4 text-center">
-        <Footer />
-      </div>
     </div>
   );
 };

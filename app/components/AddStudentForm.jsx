@@ -1,4 +1,5 @@
-"use case"
+
+"use client"
 import React, { useState } from 'react';
 
 const AddStudentForm = ({ onAddStudent }) => {
