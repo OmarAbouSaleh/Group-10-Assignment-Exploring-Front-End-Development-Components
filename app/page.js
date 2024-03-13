@@ -74,6 +74,13 @@ export default function Home() {
           <StudentList students={students} onEdit={handleEdit} onRemove={handleRemove} />
         </div>
       </div>
+      <img
+        src="/grad.jpg" 
+        alt="Graduation"
+        style={{position: 'absolute', left: '64px', bottom: '0px', height: '350px', width: 'auto', marginBottom: '-100px' }}
+      />
+
+
       <Footer />
     </div>
   );

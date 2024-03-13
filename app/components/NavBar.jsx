@@ -3,7 +3,7 @@ import React from "react";
 const NavBar = () => {
   return (
     <div>
-      <nav className="bg-blue-500 p-4">
+      <nav style={{ backgroundColor: '#AFEEEE', padding: '1rem' }}>
         <div className="container mx-auto flex justify-between items-center">
           <a href="/" className="text-lg font-bold text-white">
             A+

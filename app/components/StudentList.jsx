@@ -3,7 +3,7 @@ import React from 'react';
 
 const StudentList = ({ students, onEdit, onRemove }) => {
   return (
-    <div className="bg-blue-500 text-white p-8">
+    <div style={{ backgroundColor: '#AFEEEE' }} className="text-gray-700 p-8">
       <h1 className="text-3xl font-bold text-center mb-6">Student List</h1>
       <ul className="list-none p-0">
         {students.map((student) => (
