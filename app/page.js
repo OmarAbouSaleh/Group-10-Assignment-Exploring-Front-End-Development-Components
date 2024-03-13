@@ -11,7 +11,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch('http://localhost:5001/students');
+      const response = await fetch('https://jsonserver-v.vercel.app/students');
       const data = await response.json();
       setStudents(data);
     };
@@ -21,7 +21,7 @@ export default function Home() {
   const handleAddOrEditStudent = async (studentData) => {
     if (editStudent) {
       // Edit mode
-      const response = await fetch(`http://localhost:5001/students/${editStudent.id}`, {
+      const response = await fetch(`https://jsonserver-v.vercel.app/students/${editStudent.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(studentData),
@@ -32,7 +32,7 @@ export default function Home() {
       }
     } else {
       // Add new student mode
-      const response = await fetch('http://localhost:5001/students', {
+      const response = await fetch('https://jsonserver-v.vercel.app/students', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(studentData),
@@ -51,7 +51,7 @@ export default function Home() {
 
   const handleRemove = async (studentId) => {
     try {
-      const response = await fetch(`http://localhost:5001/students/${studentId}`, {
+      const response = await fetch(`https://jsonserver-v.vercel.app/students/${studentId}`, {
         method: 'DELETE',
       });
       if (!response.ok) {
